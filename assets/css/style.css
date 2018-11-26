@@ -1,0 +1,50 @@
+#train-table th,
+td {
+  display: inline-block;
+  width: 16.575%;
+}
+
+body  {
+  background: url(../images/trainbackground.jpg);
+}
+
+.card {
+  opacity: .95;
+}
+
+.jumbotron {
+  opacity: .95;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.train-left {
+  position: relative;
+  top: -100px;
+  animation-name: trainleft;
+  animation-duration: 4s;
+}
+
+.train-right {
+  position: relative;
+  top: -100px;
+  left: 800px;
+  animation-name: trainright;
+  animation-duration: 4s;
+}
+
+@keyframes trainleft {
+  0%   {left:0px; top:-100px;}
+  25%  {left:900px; top:-100px;}
+  50%  {left:900px; top:-100px;}
+  75%  {left:0px; top:-100px;}
+  100% {left:0px; top:-100px;}
+}
+
+@keyframes trainright {
+  0%   {left:800px; top:-100px;}
+  25%  {left:-100px; top:-100px;}
+  50%  {left:-100px; top:-100px;}
+  75%  {left:800px; top:-100px;}
+  100% {left:800px; top:-100px;}
+}
