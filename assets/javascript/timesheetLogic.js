@@ -10,12 +10,6 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// function forceNumeric(){
-//   var $input = $(this);
-//   $input.val($input.val().replace(/[^\d]+/g,''));
-// }
-// $('#time-input').on('propertychange input', 'input[type="number"]', forceNumeric);
-
 $("#add-train-btn").on("click", function (event) {
   event.preventDefault();
 
@@ -33,13 +27,10 @@ $("#add-train-btn").on("click", function (event) {
     freq: trainFreq
   };
 
+  //put new train in firebase to put snapshot into
   database.ref().push(newTrain);
 
-  console.log(newTrain.name);
-  console.log(newTrain.destination);
-  console.log(newTrain.time);
-  console.log(newTrain.freq);
-
+  //annoying alert
   alert("Train successfully added");
 
   $("#train-name-input").val("");
